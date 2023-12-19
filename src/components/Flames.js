@@ -3,6 +3,8 @@ import React,{useState} from "react";
 
 export default function Flames() {
 
+    const arr = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
+
    const [name1,setName1] = useState("");
    const [name2,setName2] = useState("");
    const [answer,setAnswer] = useState("");
@@ -29,21 +31,7 @@ export default function Flames() {
         }
         // console.log(s1Arr);
         // console.log(s2Arr);
-        let ans = (s1Arr.length+s2Arr.length)%6;
-        // console.log(ans);
-        if(ans==1){
-            setAnswer("Friends")
-        }else if(ans==2){
-            setAnswer("Love")
-        }else if(ans==3){
-            setAnswer("Affection")
-        }else if(ans==4){
-            setAnswer("Marriage")
-        }else if(ans==5){
-            setAnswer("Enemy")
-        }else if(ans==0){
-            setAnswer("Siblings")
-        }
+        setAnswer(arr[(s1Arr.length+s2Arr.length)%6]);
 
     }
 
